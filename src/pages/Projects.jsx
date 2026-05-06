@@ -5,7 +5,7 @@ import TodoApp from './Todoapp';
 function Projects(props) {
     const [repos, setRepos] = useState([]);
     useEffect(() => {
-        fetch('https://api.github.com/users/your-github-username/repos')
+        fetch('https://api.github.com/users/kanansuthar/repos')
         .then(res=> res.json())
         .then(data => setRepos(data));
     },[]);
@@ -14,7 +14,7 @@ function Projects(props) {
         <section id="projects">
 
             <h2>My Projects</h2>
-            <p>Todo App Project</p>
+            
             <div className="projects-container">
                 {repos.slice(0,3).map((repo)=>{
                     <div className="project-card" key={repo.id}>
@@ -32,25 +32,29 @@ function Projects(props) {
             <div className="project-card">
                 <h3>Portfolio Website</h3>
                 <p>Personal portfolio made using React.</p>
-                <button>View Code</button>          
+                <a href="https://github.com/kanansuthar/-personal-portfolio" target="_blank" rel="noopener noreferrer">
+                    <button>View Code</button>
+                </a>
             </div>
 
             <div className="project-card">
                 <h3>Todo App</h3>
                 <p>Task manager built using JavaScript</p>
-                <button>View Code</button>
+                <a href="https://github.com/kanansuthar/-personal-portfolio/blob/main/src/pages/Todoapp.jsx">
+                  <button>View Code</button>
+                </a>
             </div>
 
             <div className="project-card">
                 <h3>Weather App</h3>
                 <p>Weather forecast app using OpenWeatherMap API.</p>
-                <button>View Code</button>
+                <a href="https://github.com/kanansuthar/weather-app" target="_blank" rel="noopener noreferrer">
+                    <button>View Code</button>
+                </a>
             </div>
-
-            </div>
-
-        </section>
-    );
+        </div>
+     </section>
+    )
 }
 
 export default Projects;

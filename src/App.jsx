@@ -8,6 +8,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import WeatherApp from "./pages/WeatherApp";
 
 import './index.css';
 import './App.css';
@@ -24,11 +25,11 @@ function App() {
     
     reveals.forEach(reveal => {
       observer.observe(reveal);
-  }, []);
-  });
+    });
+  },[]);
+  
   return (
     <>
-    
       <Navbar />
       
 
@@ -39,9 +40,10 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/todo" element={<TodoApp/>}/>
+        <Route path="/weather" element={<WeatherApp />} />
+        
       </Routes>
       <Footer />
-    
           </>
   )
 }

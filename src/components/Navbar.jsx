@@ -12,6 +12,7 @@ function Navbar(props) {
                 <li><Link to="/projects">Projects</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
                 <li><Link to="/todo">Todo</Link></li>
+                <li><Link to="/weather">Weather</Link></li>
                 <li>
                      <a href="https://github.com/kanansuthar" target="_blank">
                     GitHub

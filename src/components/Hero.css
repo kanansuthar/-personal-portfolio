@@ -158,3 +158,15 @@
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
 }
+
+.btn-weather{
+  padding:10px 20px;
+  border-radius:6px;
+  background-color: #e5e5e5;
+  color:black;
+  transition: 0.3s;
+}
+
+.btn-weather:hover{
+  background-color: #cfcfcf;
+}

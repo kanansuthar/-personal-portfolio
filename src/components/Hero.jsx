@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import Particles from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import profile from "../assets/profile.jpg";
+import {Link} from 'react-router-dom';
 
 function Hero() {
 
@@ -13,7 +14,7 @@ function Hero() {
 
   return (
     <section id="hero" className="hero">
-      {/* Particles Background */}
+      
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -46,13 +47,22 @@ function Hero() {
         />
 
         <div className="hero-buttons">
-          <button className="btn-primary">View Projects</button>
+          <Link to="/projects">
+            <button className="btn-primary">View Projects</button>
+          </Link>
+
+          <Link to="/weather">
+            <button className="btn-primary">Check Weather</button>
+          </Link>
+
+          <a href="/resume.pdf" download>
           <button className="btn-secondary">Download Resume</button>
+          </a>
         </div>
       </div>
 
       <div className="hero-right">
-        {/* IMAGE */}
+       
         <img
           src={profile}
           alt="Profile"
